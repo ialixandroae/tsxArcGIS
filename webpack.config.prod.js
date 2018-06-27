@@ -1,3 +1,11 @@
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+
+const extractSass = new ExtractTextPlugin({
+  filename: "[name].css",
+  disable: false
+});
+
 const path = require('path');
 
 module.exports = {
@@ -7,7 +15,6 @@ module.exports = {
     filename: "index.bundle.js",
     libraryTarget: "amd"
   },
-  devtool: "source-map",
   resolve: {
     extensions: [".js", ".json", ".ts", ".tsx"]
   },
@@ -21,6 +28,10 @@ module.exports = {
         }
       }
     ]
+  },
+  plugins: [extractSass, new UglifyJsPlugin()],
+  devServer: {
+    contentBase: __dirname
   },
   externals: [
     function(context, request, callback) {

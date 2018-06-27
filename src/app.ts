@@ -1,16 +1,31 @@
-console.log('Ionut');
-
 import * as Map from 'esri/Map';
 import * as MapView from  'esri/views/MapView';
 
-const myMap = new Map({
-    basemap: 'streets'
-});
+export class _Map {
+    basemap: string;
+    container: string;
+    
+    constructor(basemap: string, container: string) {
+        this.basemap = basemap;
+        this.container = container;
+    }
 
-const mapView = new MapView({
-    map: myMap,
-    container: "viewMap",
-    center: [25, 45],
-    zoom: 6
-});
+    createMap(){
+        const myMap = new Map({
+            basemap: this.basemap
+        });
+
+        const mapView = new MapView({
+            map: myMap,
+            container: this.container,
+            center: [-118, 33.5],
+            zoom: 8
+        });
+        return mapView;
+    }
+}
+
+
+
+
  

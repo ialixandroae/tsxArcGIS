@@ -9,11 +9,13 @@
     <title>TypeScript React Boilerplate App</title>
 
     <link rel='stylesheet' href='https://js.arcgis.com/4.7/esri/css/main.css'>
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <style>
         html,
         body,
-        #viewMap {
+        #root{
             height: 100%;
             width: 100%;
             padding: 0;
@@ -23,9 +25,9 @@
 </head>
 
 <body>
-    <h1>TypeScript React Boilerplate</h1>
-    <div id="viewMap"></div>
-    
+    <div id="root">
+    </div>
+
     <!--load ArcGIS API for JavaScript-->
     <script>
         var dojoConfig = {
@@ -40,7 +42,7 @@
     <script type='text/javascript' rel=preload src='https://js.arcgis.com/4.7/'></script>
     <!--load app-->
     <script>
-        require(['../dist/main.bundle.js'], function (main) { });
+        require(['../dist/index.bundle.js'], function (main) { });
     </script>
 </body>
 

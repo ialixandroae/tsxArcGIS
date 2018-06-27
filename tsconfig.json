@@ -7,16 +7,23 @@
         "target": "es5",
         "types": [
             "arcgis-js-api",
-            "dojo"
+            "dojo",
+            "react",
+            "react-dom"
         ],
         "typeRoots": [
             "./node_modules/@types"
         ],
         "experimentalDecorators": true,
         "jsx": "react",
-        "reactNamespace": "jsxFactory"
+        "jsxFactory": "React.createElement"
+        
     },
     "include": [
         "./src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
     ]
 }

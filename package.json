@@ -4,17 +4,22 @@
   "description": "Boilerplate for WebGIS app using TypeScript, React & ArcGIS API for JavaScript 4.x",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --entry ./src/app.ts --output-filename ./dist/main.bundle.js --open",
-    "build": "webpack -p"
+    "start": "webpack-dev-server --entry ./src/components/index.tsx --output-filename ./dist/index.bundle.js --open",
+    "build": "webpack -p --config ./webpack.config.prod.js",
+    "live": "live-server --port=8081"
   },
   "author": "Ionut Alixandroae",
   "license": "ISC",
   "dependencies": {
-    "@arcgis/webpack-plugin": "^4.7.11"
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   },
   "devDependencies": {
     "@types/arcgis-js-api": "4.7",
     "@types/dojo": "^1.9.40",
+    "@types/react": "^16.3.17",
+    "@types/react-bootstrap": "^0.32.10",
+    "@types/react-dom": "^16.0.6",
     "awesome-typescript-loader": "^3.4.1",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -23,7 +28,9 @@
     "jshint": "^2.9.5",
     "jshint-loader": "^0.8.4",
     "json-loader": "^0.5.7",
+    "live-server": "^1.2.0",
     "node-sass": "^4.7.2",
+    "react-bootstrap": "^0.32.1",
     "sass-loader": "^6.0.6",
     "serviceworker-webpack-plugin": "^0.2.3",
     "style-loader": "^0.19.1",
