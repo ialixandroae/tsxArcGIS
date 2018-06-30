@@ -1,5 +1,5 @@
 import * as React from "react";
-import { _Map } from "../app";
+import { _Map } from "../ts/app";
 
 export default class Map extends React.Component<any, any>{
     render() {
