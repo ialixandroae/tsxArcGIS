@@ -1,0 +1,43 @@
+html,
+body,
+#root{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#mapView {
+    flex-grow: 1;
+}
+
+.navbar {
+    margin: 0;
+}
+
+.navbar-inverse .navbar-nav>li>a  {
+    color: #ebf0fa;
+}
+
+.navbar>.container-fluid .navbar-brand {
+    color: #ebf0fa;
+}
+
+.navbar>.container-fluid .navbar-brand > span{
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.navbar>.container-fluid .navbar-brand:hover {
+    color: #ffffff;
+}
+
+.container-fluid {
+    background-color: #0e2d4c;
+}
+
+h5 {
+    margin: 1rem;
+}

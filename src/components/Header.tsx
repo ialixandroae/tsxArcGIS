@@ -4,7 +4,7 @@ export default class Header extends React.Component<any, any> {
     render() {
         return (
             <div>
-                <h3>WebGIS App created using React, TypeScript and ArcGIS API for JavaScript</h3>
+                <h5 className="text-center">WebGIS App created using React, TypeScript and ArcGIS API for JavaScript</h5>
             </div>
         )
     }
