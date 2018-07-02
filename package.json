@@ -1,5 +1,5 @@
 {
-  "name": "typescript-react-boilerplate",
+  "name": "tscArcGIS",
   "version": "1.0.0",
   "description": "Boilerplate for WebGIS app using TypeScript, React & ArcGIS API for JavaScript 4.x",
   "main": "index.js",
